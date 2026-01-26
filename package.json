@@ -2,18 +2,6 @@
   "name": "@docmino/knex-data-api-client",
   "version": "1.20.0",
   "description": "Knex Data API Client",
-  "main": "index.js",
-  "files": [
-    "src/**/*.js"
-  ],
-  "scripts": {
-    "lint": "eslint src",
-    "package": "rm -rf node_modules && npm install --prod"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/docmino/knex-data-api-client.git"
-  },
   "keywords": [
     "knex",
     "data",
@@ -24,17 +12,31 @@
     "mysql",
     "postgres"
   ],
-  "author": "Samin Shams",
-  "license": "MIT",
+  "homepage": "https://github.com/docmino/knex-data-api-client#readme",
   "bugs": {
     "url": "https://github.com/docmino/knex-data-api-client/issues"
   },
-  "homepage": "https://github.com/docmino/knex-data-api-client#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/docmino/knex-data-api-client.git"
+  },
+  "license": "MIT",
+  "author": "Samin Shams",
+  "type": "commonjs",
+  "main": "index.js",
+  "files": [
+    "src/**/*.js"
+  ],
+  "scripts": {
+    "lint": "eslint src",
+    "package": "rm -rf node_modules && npm install --prod"
+  },
   "dependencies": {
     "@aws-sdk/client-rds-data": "^3.490.0",
     "bluebird": "3.7.2",
     "sqlstring": "^2.3.3"
   },
+  "devDependencies": {},
   "peerDependencies": {
     "knex": "^2.1.0"
   }
