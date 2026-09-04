@@ -28,15 +28,13 @@ function dataAPI(ClientRDSDataAPI, Client, dialect) {
     },
 
     acquireConnection() {
-      const connection = this._driver(this.connectionSettings);
-      // return Bluebird.resolve(connection);
-      return Promise.resolve(connection);
+      // Reuse the SDK client and its HTTP pool, but isolate transaction metadata.
+      return Promise.resolve({ ...this.driver });
     },
 
-    // Destroy - no connection pool to tear down, so just resolve
     destroy() {
-      // return Bluebird.resolve();
-      return Promise.resolve();
+      this.driver?.destroy();
+      return Client.prototype.destroy.apply(this, arguments);
     },
 
     // Runs the query on the specified connection, providing the bindings

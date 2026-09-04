@@ -1,6 +1,6 @@
 {
   "name": "@docmino/knex-data-api-client",
-  "version": "1.20.0",
+  "version": "1.20.1",
   "description": "Knex Data API Client",
   "keywords": [
     "knex",
@@ -29,7 +29,8 @@
   ],
   "scripts": {
     "lint": "eslint src",
-    "package": "rm -rf node_modules && npm install --prod"
+    "package": "rm -rf node_modules && npm install --prod",
+    "test": "node --test"
   },
   "dependencies": {
     "@aws-sdk/client-rds-data": "^3.490.0",
