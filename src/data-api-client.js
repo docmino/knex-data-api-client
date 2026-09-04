@@ -600,6 +600,7 @@ const init = (params) => {
 
   // Return public methods
   return {
+    destroy: () => config.RDS.destroy?.(),
     // Query method, pass config and parameters
     query: (...x) => query(config, ...x),
     // Transaction method, pass config and parameters
